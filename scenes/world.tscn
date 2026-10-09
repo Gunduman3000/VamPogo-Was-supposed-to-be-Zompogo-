@@ -649,3 +649,12 @@ offset_bottom = 195.0
 scale = Vector2(0.72975147, 1.1342508)
 theme_override_font_sizes/font_size = 100
 text = "HOLD SPACE TO CHARGE JUMP"
+
+[node name="Label2" type="Label" parent="." unique_id=1909743246]
+offset_left = 4029.0
+offset_top = 39.0
+offset_right = 5601.0
+offset_bottom = 176.0
+scale = Vector2(0.72975147, 1.1342508)
+theme_override_font_sizes/font_size = 100
+text = "Just lowkey run for your life"
