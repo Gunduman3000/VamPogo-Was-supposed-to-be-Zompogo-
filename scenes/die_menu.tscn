@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://dn14gbg6fn4a1"]
+
+[ext_resource type="Script" uid="uid://dktno0w2aqldc" path="res://scripts/die_menu.gd" id="1_sbueq"]
+[ext_resource type="Texture2D" uid="uid://k0oe82vcrifu" path="res://assets/die_menu.png" id="2_4utos"]
+[ext_resource type="FontFile" uid="uid://csojv77bmoepw" path="res://assets/driftwood/Drift___.ttf" id="3_be2g2"]
+[ext_resource type="Texture2D" uid="uid://denaem51cwyxi" path="res://assets/bats/bat1.png" id="3_q3miy"]
+[ext_resource type="Texture2D" uid="uid://r64crj8epan" path="res://assets/bats/bat3.png" id="4_be2g2"]
+[ext_resource type="Texture2D" uid="uid://k0hep6f7dp2n" path="res://assets/Sprites/Guy_Pogo_Vampire2.png" id="6_be2g2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xwe75"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3jufd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mdgkm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u5iv6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2sibr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ug0dc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q3miy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h7pf0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_be2g2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vfc7x"]
+
+[node name="Die_menu" type="Control" unique_id=501127343]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 237.0
+offset_top = 223.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sbueq")
+
+[node name="DieMenu" type="Sprite2D" parent="." unique_id=821365117]
+position = Vector2(344, 96)
+scale = Vector2(1.292958, 1.6434438)
+texture = ExtResource("2_4utos")
+
+[node name="restart" type="Button" parent="." unique_id=2045731181]
+layout_mode = 0
+offset_left = 239.00003
+offset_top = -38.0
+offset_right = 705.0
+offset_bottom = 91.0
+scale = Vector2(0.42017788, 0.7005927)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.44997334, 0.07151977, 9.62615e-08, 1)
+theme_override_fonts/font = ExtResource("3_be2g2")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xwe75")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3jufd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mdgkm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u5iv6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2sibr")
+text = "Restart"
+
+[node name="quit" type="Button" parent="." unique_id=1571183100]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 224.00002
+offset_right = 517.0
+offset_bottom = 353.0
+scale = Vector2(0.32973433, 0.5264391)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.44997334, 0.07151977, 9.62615e-08, 1)
+theme_override_fonts/font = ExtResource("3_be2g2")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ug0dc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q3miy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h7pf0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_be2g2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vfc7x")
+text = "QUIT"
+
+[node name="Bat1" type="Sprite2D" parent="." unique_id=1628900278]
+position = Vector2(-36, -49)
+rotation = -0.7853982
+scale = Vector2(12.666598, 11.952234)
+texture = ExtResource("3_q3miy")
+
+[node name="Bat3" type="Sprite2D" parent="." unique_id=1932461125]
+position = Vector2(335, 189)
+scale = Vector2(-6.367823, 6.3703322)
+texture = ExtResource("4_be2g2")
+
+[node name="GuyPogoVampire2" type="Sprite2D" parent="." unique_id=814403888]
+position = Vector2(725, 52)
+scale = Vector2(6, 6)
+texture = ExtResource("6_be2g2")
+
+[node name="GuyPogoVampire3" type="Sprite2D" parent="." unique_id=1869455251]
+position = Vector2(-117, 483)
+scale = Vector2(8.764892, 7.549434)
+texture = ExtResource("6_be2g2")
+
+[node name="Label" type="Label" parent="." unique_id=997793269]
+layout_mode = 0
+offset_left = -37.0
+offset_top = 292.0
+offset_right = 718.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0.91805315, 0.23429966, 1.92523e-07, 1)
+theme_override_colors/font_shadow_color = Color(0.38431373, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_be2g2")
+theme_override_font_sizes/font_size = 100
+text = "VAMPIRERIZED"

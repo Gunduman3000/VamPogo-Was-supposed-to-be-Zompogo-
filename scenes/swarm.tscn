@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://jvt7ml8kfl3f"]
+
+[ext_resource type="Script" uid="uid://b2vv3awhsh6r8" path="res://scripts/swarm.gd" id="1_qeij0"]
+[ext_resource type="Shader" uid="uid://dmusjctpiedvw" path="res://swarm_shader.tres" id="1_xxmg8"]
+[ext_resource type="Texture2D" uid="uid://denaem51cwyxi" path="res://assets/bats/bat1.png" id="2_xfx4e"]
+[ext_resource type="Texture2D" uid="uid://r64crj8epan" path="res://assets/bats/bat3.png" id="4_l2yb2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tsaqm"]
+shader = ExtResource("1_xxmg8")
+shader_parameter/radius1 = 100.0
+shader_parameter/angle1 = 50.0
+shader_parameter/angle2 = 10.0
+shader_parameter/radius2 = 20.0
+shader_parameter/angle3 = 100.0
+shader_parameter/angle4 = 20.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cy6uq"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 60.0
+angle_min = 271.0
+angle_max = 633.80005
+velocity_pivot = Vector3(3, 0, 0)
+spread = 180.0
+flatness = 1.0
+initial_velocity_max = 696.32996
+gravity = Vector3(-7, 98, 0)
+attractor_interaction_enabled = false
+turbulence_enabled = true
+turbulence_noise_strength = 20.0
+turbulence_influence_min = 0.65400004
+turbulence_influence_max = 0.739
+turbulence_initial_displacement_min = 15.800002
+turbulence_initial_displacement_max = 15.800002
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5d5ig"]
+radius = 100.0
+
+[node name="Swarm" type="Node2D" unique_id=1559126575 groups=["enemy"]]
+script = ExtResource("1_qeij0")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1893685175]
+texture_filter = 1
+material = SubResource("ShaderMaterial_tsaqm")
+position = Vector2(-4, -1)
+amount = 200
+texture = ExtResource("2_xfx4e")
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_cy6uq")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=336493099]
+texture_filter = 1
+material = SubResource("ShaderMaterial_tsaqm")
+position = Vector2(-4, -1)
+amount = 200
+texture = ExtResource("4_l2yb2")
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_cy6uq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1860782487 groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=666956459]
+scale = Vector2(0.99697375, 1)
+shape = SubResource("CircleShape2D_5d5ig")
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Area2D" to="." method="_on_area_2d_body_shape_exited"]

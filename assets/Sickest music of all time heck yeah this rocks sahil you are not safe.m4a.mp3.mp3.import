@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdmdnclu2q1sg"
+path="res://.godot/imported/Sickest music of all time heck yeah this rocks sahil you are not safe.m4a.mp3.mp3-8d90438b9dffa0e6bcf09c927bf53411.mp3str"
+
+[deps]
+
+source_file="res://assets/Sickest music of all time heck yeah this rocks sahil you are not safe.m4a.mp3.mp3"
+dest_files=["res://.godot/imported/Sickest music of all time heck yeah this rocks sahil you are not safe.m4a.mp3.mp3-8d90438b9dffa0e6bcf09c927bf53411.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
